@@ -1,0 +1,10 @@
+.idea/
+**/target/
+**/.sonar/
+*.iml
+*.ipr
+**/.settings/
+**/.project
+**/.classpath
+**/node_modules/
+logs
