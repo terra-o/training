@@ -1,0 +1,9 @@
+org/terraO/model/ResearchEntity.class
+org/terraO/model/ResearchEntity$ResearchEntityBuilder.class
+org/terraO/model/Article.class
+org/terraO/Main.class
+org/terraO/model/Article$ArticleBuilder.class
+org/terraO/model/SearchBody$SearchBodyBuilder.class
+org/terraO/service/ResearchService.class
+org/terraO/model/SearchBody.class
+org/terraO/controller/CoreController.class

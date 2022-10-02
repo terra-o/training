@@ -1,5 +1,4 @@
 .idea/
-**/target/
 **/.sonar/
 *.iml
 *.ipr
