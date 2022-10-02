@@ -12,7 +12,6 @@ import org.terraO.service.ResearchService;
 import java.util.List;
 
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
-import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
 @AllArgsConstructor
 @RestController
@@ -26,7 +25,7 @@ public class CoreController {
         return ResponseEntity.ok(researchService.search());
     }
 
-    @RequestMapping(method = GET, value = "/search/{searchContent}/{topic}", produces = "application/json")
+    @RequestMapping(method = GET, value = "/search/{searchContent}/{topic}/{pageNum}/{lang}", produces = "application/json")
     public ResponseEntity<List<Article>> getArticlesWithParams(
             @PathVariable("searchContent") final String searchContent,
             @PathVariable("topic") final String topic,
