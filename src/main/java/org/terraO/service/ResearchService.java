@@ -73,25 +73,25 @@ public class ResearchService {
 
     private String getSearchTopic(String searchTopic) {
         searchTopic = searchTopic.toLowerCase();
-        return switch (searchTopic) {
-            case "applied sciences" -> "138";
-            case "urban development" -> "348";
-            case "develop" -> "153";
-            case "wildfires" -> "152";
-            case "climate" -> "147";
-            case "risk & resilience" -> "143";
-            case "sdg" -> "149";
-            case "socioeconomic assessments" -> "151";
-            case "valuables" -> "150";
-            case "capacity building" -> "13";
-            case "disasters" -> "14";
-            case "ecological forecasting" -> "15";
-            case "agriculture" -> "16";
-            case "health & air quality" -> "17";
-            case "water resources" -> "18";
-            case "group on earth observations" -> "105";
-            case "prizes & challenges" -> "141";
-            default -> searchTopic;
-        };
+        switch (searchTopic) {
+            case "applied sciences": return "138";
+            case "urban development": return "348";
+            case "develop": return "153";
+            case "wildfires": return "152";
+            case "climate": return "147";
+            case "risk & resilience": return "143";
+            case "sdg": return "149";
+            case "socioeconomic assessments": return "151";
+            case "valuables": return "150";
+            case "capacity building": return "13";
+            case "disasters": return "14";
+            case "ecological forecasting": return "15";
+            case "agriculture": return "16";
+            case "health & air quality": return "17";
+            case "water resources": return "18";
+            case "group on earth observations": return "105";
+            case "prizes & challenges": return "141";
+            default: return searchTopic;
+        }
     }
 }
