@@ -35,9 +35,14 @@ public class ResearchService {
                 HtmlElement itemText = item.getFirstByXPath(".//div[@class='field field--name-node-title field--type-ds field--label-hidden field__item']//h2//a");
                 HtmlImage itemImage = item.getFirstByXPath(".//div[@class='field field--name-field-featured-image field--type-entity-reference field--label-hidden field__item']/img");
                 HtmlAnchor itemLink = item.getFirstByXPath(".//div[@class='field field--name-node-title field--type-ds field--label-hidden field__item']//h2//a");
-                String itemLinkA = itemLink == null ? "NoLinkFound" : "https://appliedsciences.nasa.gov/" + itemLink.getHrefAttribute() ;
+                HtmlAnchor itemType = item.getFirstByXPath(".//div[@class='field field--name-field-training-type field--type-entity-reference field--label-inline clearfix']//a");
+                HtmlElement itemLevel = item.getFirstByXPath(".//div[@class='field field--name-field-level field--type-entity-reference field--label-inline clearfix']//div[@class='field__item']");
+
+                String itemLinkA = itemLink == null ? "NoLinkFound" : "https://appliedsciences.nasa.gov" + itemLink.getHrefAttribute();
+                String itemTypeA = itemType == null ? "NoLinkFound" : itemType.asNormalizedText();
+
                 assert itemLink != null;
-                Article article = new Article(itemText.asNormalizedText(), itemImage.getSrc(), itemLinkA);
+                Article article = new Article(itemText.asNormalizedText(), itemImage.getSrc(), itemLinkA, itemTypeA, itemLevel.asNormalizedText());
                 articles.add(article);
             }
         }

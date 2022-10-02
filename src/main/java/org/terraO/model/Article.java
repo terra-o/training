@@ -13,4 +13,6 @@ public class Article {
     String title;
     String image;
     String link;
+    String trainingType;
+    String level;
 }
