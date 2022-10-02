@@ -26,7 +26,7 @@ public class CoreController {
         return ResponseEntity.ok(researchService.search());
     }
 
-    @RequestMapping(method = POST, value = "/search/{searchContent}/{topic}", produces = "application/json")
+    @RequestMapping(method = GET, value = "/search/{searchContent}/{topic}", produces = "application/json")
     public ResponseEntity<List<Article>> getArticlesWithParams(
             @PathVariable("searchContent") final String searchContent,
             @PathVariable("topic") final String topic,
