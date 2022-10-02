@@ -1,0 +1,1 @@
+java -jar $JAVA_OPTS target/CORE-1.0-SNAPSHOT.jar
